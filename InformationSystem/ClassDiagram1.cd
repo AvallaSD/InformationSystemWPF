@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="InformationSystem.Employee">
+    <Position X="8" Y="3.25" Width="2.25" />
+    <AssociationLine Name="Departament" Type="InformationSystem.Departament">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.14" Y="0.081" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAGAAAAAAAAAEAAAAAAQABAAAAAAAAABBAAAAAAg=</HashCode>
+      <FileName>Employee.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Departament" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="InformationSystem.Intern">
+    <Position X="12" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Intern.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InformationSystem.Chief">
+    <Position X="12" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Chief.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InformationSystem.Departament">
+    <Position X="8.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAQAAAAAQACAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Departament.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Superior" />
+      <Property Name="Institution" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Employees" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="InformationSystem.Institution">
+    <Position X="5" Y="1.25" Width="1.5" />
+    <AssociationLine Name="LowerInstitutions" Type="InformationSystem.Institution">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.307" Y="0.373" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Superior" Type="InformationSystem.Chief" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.75" Y="1.25" />
+        <Point X="5.75" Y="0.503" />
+        <Point X="13.75" Y="0.503" />
+        <Point X="13.75" Y="3.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.921" Y="0.05" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="HigherInstitution" Type="InformationSystem.Institution" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.562" Y="1.25" />
+        <Point X="5.562" Y="0.875" />
+        <Point X="4.625" Y="0.875" />
+        <Point X="4.625" Y="1.438" />
+        <Point X="5" Y="1.438" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.473" Y="0.612" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAQAQQAAAAAAA=</HashCode>
+      <FileName>Institution.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Superior" />
+      <Property Name="HigherInstitution" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Departaments" />
+      <Property Name="LowerInstitutions" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="InformationSystem.InfoSystem">
+    <Position X="2" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InfoSystem.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Employees" />
+      <Property Name="Institutions" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
