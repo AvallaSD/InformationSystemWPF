@@ -6,20 +6,26 @@ namespace InformationSystem
 {
     public class InfoSystem
     {
-        public List<Employee> Employees
+
+        public InfoSystem()
         {
-            get => default;
-            set
-            {
-            }
+            Employees = new List<Employee>();
+            Institutions = new List<Institution>();
         }
 
-        public List<Institution> Institutions
+        public List<Employee> Employees { get; }
+
+        private List<Institution> Institutions { get; set; }
+
+        public void AddEmployee(Employee employee)
         {
-            get => default;
-            set
-            {
-            }
+            Employees.Add(employee);
         }
+
+        public void AddInstitution(Institution institution)
+        {
+            Institutions.Add(institution);
+        }
+
     }
 }

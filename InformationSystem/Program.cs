@@ -8,7 +8,7 @@ namespace Homework
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Mainjk(string[] args)
         {
             // Задание 1.
             // Спроектировать информационную систему позволяющей работать со следующей структурой:

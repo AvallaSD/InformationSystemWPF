@@ -13,19 +13,18 @@ namespace InformationSystem
         {
             return new Random().Next(min, max);
         }
-        public Employee(string firstName, string surname, string lastName, DateTime birthDate, int workPlaceID)
-            : this(firstName, surname, lastName, birthDate, workPlaceID, GenerateSalary(100, 200))
+        public Employee(string firstName, string surname, string lastName, DateTime birthDate)
+            : this(firstName, surname, lastName, birthDate, GenerateSalary(100, 200))
         {
         }
 
-        public Employee(string firstName, string surname, string lastName, DateTime birthDate, int workPlaceID, int salary)
+        public Employee(string firstName, string surname, string lastName, DateTime birthDate, int salary)
         {
             FirstName = firstName;
             Surname = surname;
             LastName = lastName;
             BirthDate = birthDate;
-            AccessionDate = DateTime.Now;
-            WorkPlaceID = workPlaceID;
+            AccessionDate = DateTime.Now;           
             Salary = salary;
         }
 

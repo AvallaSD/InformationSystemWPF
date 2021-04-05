@@ -6,6 +6,12 @@ namespace InformationSystem
 {
     public class Institution
     {
+        public Institution(Chief superior, string name)
+        {
+            Superior = superior;
+            Name = name;
+        }
+
         /// <summary>
         /// Департаменты, содержащиеся данным ведомством
         /// </summary>
@@ -39,7 +45,26 @@ namespace InformationSystem
             }
         }
 
+        /// <summary>
+        /// Вышестоящее ведомство
+        /// </summary>
         public Institution HigherInstitution
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public string Name
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public int Id
         {
             get => default;
             set
