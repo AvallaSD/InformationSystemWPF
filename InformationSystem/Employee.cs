@@ -4,7 +4,8 @@ using System.Text;
 
 namespace InformationSystem
 {
-    public class Employee
+
+    public class Employee : IExplorable
     {
         /// <summary>
         /// Статический метод, генерирующий зарплаты
@@ -24,8 +25,9 @@ namespace InformationSystem
             Surname = surname;
             LastName = lastName;
             BirthDate = birthDate;
-            AccessionDate = DateTime.Now;           
+            AccessionDate = DateTime.Now;
             Salary = salary;
+            FullName = LastName + " " + FirstName;
         }
 
         /// <summary>
@@ -59,14 +61,13 @@ namespace InformationSystem
         public int Salary { get; set; }
 
         /// <summary>
-        /// Департиамент, в котором работает сотрудник
+        /// Место, где работает сотрудник
         /// </summary>
-        public Departament Departament
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public IExplorable WorkPlace { get; set; }
+
+        /// <summary>
+        /// Имя для показа в иерархии
+        /// </summary>
+        public string FullName { get; set; }
     }
 }

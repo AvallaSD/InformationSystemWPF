@@ -18,19 +18,40 @@ namespace InformationSystem
     /// </summary>
     public partial class InstitutionAdditionWindow : Window
     {
+        List<Chief> chiefs;
+        object selected;
 
-        public InstitutionAdditionWindow(InfoSystem infoSystem)
+
+
+        public InstitutionAdditionWindow(Organisation infoSystem, MainWindow main, object selected)
         {
             InitializeComponent();
-            InfoBase = infoSystem;
-            chiefComboBox.ItemsSource = infoSystem.Employees.OfType<Chief>().Select(x=>$"{x.Surname} {x.FirstName}");
+            Organisatioin = infoSystem;
+            Main = main;
+            chiefs = infoSystem.ChiefsList.ToList();
+            chiefComboBox.ItemsSource = chiefs.Where(x => x.WorkPlace == null).Select(x => $"{x.Surname} {x.FirstName}");
+            this.selected = selected;
+            
         }
 
-        private InfoSystem InfoBase { get; set; }
+        public MainWindow Main { get; set; }
+        private Organisation Organisatioin { get; set; }
 
         private void submitBtn_Click(object sender, RoutedEventArgs e)
         {
-            InfoBase.AddInstitution(new Institution((Chief)chiefComboBox.SelectedItem, name.Text);
+            var newInstitution = new Institution(chiefs.ElementAt(chiefComboBox.SelectedIndex), name.Text);
+            if (!(selected is Institution))
+            {
+                Organisatioin.AddInstitution(newInstitution);
+            }
+            else
+            {
+                ((Institution)selected).Children.Add(newInstitution);
+            }
+            
+            
+            Close();
+            Main.Activate();
         }
     }
 }

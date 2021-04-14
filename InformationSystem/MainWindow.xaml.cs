@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,24 +21,25 @@ namespace InformationSystem
     /// </summary>
     public partial class MainWindow : Window
     {
-        InfoSystem InfoBase { get; set; }
+        Organisation Organisation { get; set; }
+        ObservableCollection<IExplorable> testChildren;
+
         public MainWindow()
         {
             InitializeComponent();
-            InfoBase = new InfoSystem();
-            employeesListBox.ItemsSource = InfoBase.Employees;
-
+            Organisation = new Organisation();
+            treeView.ItemsSource = Organisation.Children;         
         }
 
         private void addEmployee_Click(object sender, RoutedEventArgs e)
         {
-            EmployeeAdditionWindow eaw = new EmployeeAdditionWindow(InfoBase);
+            EmployeeAdditionWindow eaw = new EmployeeAdditionWindow(Organisation, this, (IExplorable)treeView.SelectedItem);
             eaw.Show();
         }
 
         private void addInstitution_Click(object sender, RoutedEventArgs e)
         {
-            InstitutionAdditionWindow iaw = new InstitutionAdditionWindow(InfoBase);
+            InstitutionAdditionWindow iaw = new InstitutionAdditionWindow(Organisation, this, treeView.SelectedItem);
             iaw.Show();
         }
     }

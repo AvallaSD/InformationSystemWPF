@@ -1,43 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 
 namespace InformationSystem
 {
-    public class Departament
+    public class Departament : IExplorable
     {
         /// <summary>
         /// Сортудники, работающие в данном департаменте
         /// </summary>
-        public List<Employee> Employees { get; set; }
+        public ObservableCollection<IExplorable> Children { get; set; }
 
         /// <summary>
         /// Название департамента
         /// </summary>
-        public int Name { get; set; }
+        public string FullName { get; set; }
 
         /// <summary>
         /// Глава департамента
         /// </summary>
         public Chief Superior { get; set; }
 
-        /// <summary>
-        /// Идентификатор департамента
-        /// </summary>
-        public int Id
+        public Institution Parent
         {
             get => default;
             set
             {
             }
         }
-
-        public Institution Institution
-        {
-            get => default;
-            set
-            {
-            }
-        }
-    }  
+    }
 }

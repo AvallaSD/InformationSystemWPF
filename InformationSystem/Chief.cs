@@ -4,7 +4,7 @@ using System.Text;
 
 namespace InformationSystem
 {
-    public class Chief : Employee
+    public class Chief : Employee, IExplorable
     {
         public Chief(string firstName, string surname, string lastName, DateTime birthDate)
             : this(firstName, surname, lastName, birthDate, GenerateSalary(10, 20))

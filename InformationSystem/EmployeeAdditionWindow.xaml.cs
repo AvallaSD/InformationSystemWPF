@@ -17,43 +17,60 @@ namespace InformationSystem
     /// </summary>
     public partial class EmployeeAdditionWindow : Window
     {
-        
-        public EmployeeAdditionWindow(InfoSystem infoBase)
+
+        Organisation Organisation { get; set; }
+
+        MainWindow Main { get; set; }
+
+        IExplorable selected;
+
+        public EmployeeAdditionWindow(Organisation infoBase, MainWindow main, IExplorable selected)
         {
             InitializeComponent();
-            InfoBase = infoBase;
+            Organisation = infoBase;
+            Main = main;
+            this.selected = selected;
             positionComboBox.ItemsSource = new List<string>() {"Начальник", "Интерн", "Сотрудник"};
         }
 
-        public InfoSystem InfoBase { get; set; }
-
-        public MainWindow Main { get; set; }
-
         private void submitBtn_Click(object sender, RoutedEventArgs e)
         {
-            Employee recruit = null;
-            try
+            Employee recruit;
+            switch (positionComboBox.SelectedIndex)
             {
-                switch (positionComboBox.SelectedIndex)
-                {
-                    case 0:
-                        recruit = new Chief(nameBox.Text, surnameBox.Text, lastNameBox.Text, DateTime.Parse(birthDateBox.Text));
-                        break;
-                    case 1:
-                        recruit = new Intern(nameBox.Text, surnameBox.Text, lastNameBox.Text, DateTime.Parse(birthDateBox.Text));
-                        break;
-                    case 2:
-                        recruit = new Employee(nameBox.Text, surnameBox.Text, lastNameBox.Text, DateTime.Parse(birthDateBox.Text));
-                        break;
-                    default:
-                        break;
-                }
-                InfoBase.AddEmployee(recruit);
+                case 0:
+                    recruit = new Chief(nameBox.Text, surnameBox.Text, lastNameBox.Text, DateTime.Parse(birthDateBox.Text));
+                    Organisation.AddChief(recruit as Chief);
+                    break;
+                case 1:
+                    recruit = new Intern(nameBox.Text, surnameBox.Text, lastNameBox.Text, DateTime.Parse(birthDateBox.Text));
+                    if (selected is Departament)
+                    {
+                        (selected as Departament).Children.Add(recruit);
+                        recruit.WorkPlace = selected;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Интерн может быть добавлен только в депаратамент", "Ошибка");
+                    }
+                    break;
+                case 2:
+                    recruit = new Employee(nameBox.Text, surnameBox.Text, lastNameBox.Text, DateTime.Parse(birthDateBox.Text));
+                    if (selected is Departament)
+                    {
+                        (selected as Departament).Children.Add(recruit);
+                        recruit.WorkPlace = selected;
+                    }                
+                    else
+                    {
+                        MessageBox.Show("Соотрудник может быть добавлен только в депаратамент", "Ошибка");
+                    }
+                    break;
+                default:
+                    break;                   
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            Close();
+            Main.Activate();
         }
     }
 }
