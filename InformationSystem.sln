@@ -3,7 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29911.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InformationSystem", "InformationSystem\InformationSystem.csproj", "{A9DB0A43-CACB-403B-B042-77625BCF96B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InformationSystem", "InformationSystem\InformationSystem.csproj", "{A9DB0A43-CACB-403B-B042-77625BCF96B9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7F699467-CFE1-4F59-9ECF-504912BEC9CE}"
+	ProjectSection(SolutionItems) = preProject
+		InformationSystem\bin\Debug\netcoreapp3.1\org.json = InformationSystem\bin\Debug\netcoreapp3.1\org.json
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

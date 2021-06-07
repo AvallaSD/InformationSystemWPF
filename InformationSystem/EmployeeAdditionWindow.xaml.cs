@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -8,6 +9,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace InformationSystem
@@ -35,6 +37,12 @@ namespace InformationSystem
 
         private void submitBtn_Click(object sender, RoutedEventArgs e)
         {
+            if (!DateTime.TryParse(birthDateBox.Text,out DateTime date))
+            {
+                MessageBox.Show("Incorrext date format", "Error");
+                Close();
+                return;
+            }
             Employee recruit;
             switch (positionComboBox.SelectedIndex)
             {
@@ -46,8 +54,8 @@ namespace InformationSystem
                     recruit = new Intern(nameBox.Text, surnameBox.Text, lastNameBox.Text, DateTime.Parse(birthDateBox.Text));
                     if (selected is Departament)
                     {
-                        (selected as Departament).Children.Add(recruit);
                         recruit.WorkPlace = selected;
+                        (selected as Departament).Children.Add(recruit);                        
                     }
                     else
                     {
@@ -58,17 +66,17 @@ namespace InformationSystem
                     recruit = new Employee(nameBox.Text, surnameBox.Text, lastNameBox.Text, DateTime.Parse(birthDateBox.Text));
                     if (selected is Departament)
                     {
-                        (selected as Departament).Children.Add(recruit);
                         recruit.WorkPlace = selected;
-                    }                
+                        (selected as Departament).Children.Add(recruit);                       
+                    }
                     else
                     {
                         MessageBox.Show("Соотрудник может быть добавлен только в депаратамент", "Ошибка");
                     }
                     break;
                 default:
-                    break;                   
-            }
+                    break;
+            }      
             Close();
             Main.Activate();
         }

@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Text;
+
 
 namespace InformationSystem
 {
@@ -10,8 +12,9 @@ namespace InformationSystem
 
         public Organisation()
         {
-            Children = new ObservableCollection<IExplorable>();
+
             ChiefsList = new ObservableCollection<Chief>();
+            Children = new ObservableCollection<IExplorable>(); 
         }
 
         public ObservableCollection<IExplorable> Children { get; set; }
@@ -27,6 +30,8 @@ namespace InformationSystem
         {
             Children.Add(institution);
         }
+
+        
 
     }
 }

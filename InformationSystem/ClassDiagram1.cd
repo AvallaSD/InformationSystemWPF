@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1">
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
   <Class Name="InformationSystem.Employee">
-    <Position X="11" Y="5.5" Width="2.25" />
+    <Position X="2.75" Y="1.75" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAGAAAAAAAIAAAAAAAAQABAAACAAAAABBAAAAAAg=</HashCode>
+      <HashCode>AAAAAGAAAAAAAJAAAAAAAAQABAAACAAAAABBAAAAAAg=</HashCode>
       <FileName>Employee.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="1.731" />
   </Class>
   <Class Name="InformationSystem.Intern">
-    <Position X="15" Y="7" Width="2" />
+    <Position X="1.5" Y="5.75" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Intern.cs</FileName>
@@ -17,17 +17,17 @@
     <Lollipop Orientation="Right" Position="0.258" />
   </Class>
   <Class Name="InformationSystem.Chief">
-    <Position X="15" Y="5.5" Width="2" />
+    <Position X="4.25" Y="5.75" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Chief.cs</FileName>
     </TypeIdentifier>
     <Lollipop Orientation="Right" Position="0.789" />
   </Class>
   <Class Name="InformationSystem.Departament">
-    <Position X="11.5" Y="3.25" Width="1.5" />
+    <Position X="3.75" Y="8.5" Width="3.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAIAAAAAEQAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAJAAAAAEQAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
       <FileName>Departament.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -37,30 +37,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="InformationSystem.Institution">
-    <Position X="8" Y="3.5" Width="1.5" />
-    <AssociationLine Name="Superior" Type="InformationSystem.Chief" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="8.75" Y="3.5" />
-        <Point X="8.75" Y="2.638" />
-        <Point X="16.188" Y="2.638" />
-        <Point X="16.188" Y="5.5" />
-      </Path>
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="-0.369" Y="0.269" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <AssociationLine Name="Parent" Type="InformationSystem.Institution" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="8.25" Y="3.5" />
-        <Point X="8.25" Y="3.125" />
-        <Point X="7.625" Y="3.125" />
-        <Point X="7.625" Y="3.812" />
-        <Point X="8" Y="3.812" />
-      </Path>
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="-0.025" Y="0.8" />
-      </MemberNameLabel>
-    </AssociationLine>
+    <Position X="7.75" Y="7" Width="3.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAJAAAAAEQAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
       <FileName>Institution.cs</FileName>
@@ -72,18 +49,7 @@
     <Lollipop Position="0.992" />
   </Class>
   <Class Name="InformationSystem.Organisation">
-    <Position X="5" Y="3.5" Width="1.5" />
-    <AssociationLine Name="ChiefsList" Type="InformationSystem.Chief" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="6" Y="3.5" />
-        <Point X="6" Y="2.097" />
-        <Point X="16.875" Y="2.097" />
-        <Point X="16.875" Y="5.5" />
-      </Path>
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="-0.43" Y="0.079" />
-      </MemberNameLabel>
-    </AssociationLine>
+    <Position X="7.5" Y="4.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAIAAAAAACAg=</HashCode>
       <FileName>Organisation.cs</FileName>
@@ -94,9 +60,9 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="InformationSystem.MainWindow">
-    <Position X="1.5" Y="3.5" Width="1.5" />
+    <Position X="11" Y="1.25" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAIAAAAABAAAAAAAAAAAEAAAAAEAAAAAA=</HashCode>
+      <HashCode>AAgAAAAAAAAAIAAAAABAAAAAAAAAAAAAAAQCEAIAAAA=</HashCode>
       <FileName>MainWindow.xaml.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -105,40 +71,19 @@
     <Lollipop Position="1.3" />
   </Class>
   <Class Name="InformationSystem.InstitutionAdditionWindow">
-    <Position X="3" Y="6" Width="2" />
-    <AssociationLine Name="Organisatioin" Type="InformationSystem.Organisation" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="5" Y="7.382" />
-        <Point X="5.5" Y="7.382" />
-        <Point X="5.5" Y="4.988" />
-      </Path>
-    </AssociationLine>
+    <Position X="7.25" Y="1.5" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAABAAAAAAAAAAAAAAAAQAAAAAAQAAABgAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAgQAAABgAAAAA=</HashCode>
       <FileName>InstitutionAdditionWindow.xaml.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Main" />
-      <Property Name="Organisatioin" />
+      <Property Name="Org" />
     </ShowAsAssociation>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="InformationSystem.EmployeeAdditionWindow">
-    <Position X="3" Y="1.25" Width="1.5" />
-    <AssociationLine Name="Organisation" Type="InformationSystem.Organisation" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="4.5" Y="2.156" />
-        <Point X="5.438" Y="2.156" />
-        <Point X="5.438" Y="3.5" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="Main" Type="InformationSystem.MainWindow" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="3" Y="2.058" />
-        <Point X="2" Y="2.058" />
-        <Point X="2" Y="3.5" />
-      </Path>
-    </AssociationLine>
+    <Position X="10.25" Y="4.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAFgAAAAA=</HashCode>
       <FileName>EmployeeAdditionWindow.xaml.cs</FileName>
@@ -150,7 +95,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Interface Name="InformationSystem.IExplorable">
-    <Position X="8" Y="6" Width="1.5" />
+    <Position X="12.5" Y="7.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IExplorable.cs</FileName>

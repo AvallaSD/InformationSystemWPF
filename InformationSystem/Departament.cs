@@ -7,10 +7,19 @@ namespace InformationSystem
 {
     public class Departament : IExplorable
     {
+        public Departament( Chief superior,string fullName)
+        {
+            FullName = fullName;
+            Superior = superior;
+            superior.WorkPlace = this;
+            Children = new ObservableCollection<IExplorable>();
+        }
+
         /// <summary>
         /// Сортудники, работающие в данном департаменте
         /// </summary>
         public ObservableCollection<IExplorable> Children { get; set; }
+
 
         /// <summary>
         /// Название департамента
@@ -22,12 +31,12 @@ namespace InformationSystem
         /// </summary>
         public Chief Superior { get; set; }
 
-        public Institution Parent
+        public Institution Parent { get; set; }
+
+        public string Present()
         {
-            get => default;
-            set
-            {
-            }
+            return $"Departament Name: {FullName}\n\n" +
+                $"Superior: {Superior.Present()}";
         }
     }
 }

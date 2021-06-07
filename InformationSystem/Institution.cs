@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
@@ -7,6 +8,7 @@ namespace InformationSystem
 {
     public class Institution : IExplorable
     {
+        [JsonConstructor]
         public Institution(Chief superior, string name)
         {
             Superior = superior;
@@ -15,12 +17,6 @@ namespace InformationSystem
             superior.WorkPlace = this;
         }
 
-        public Institution(Chief superior, string name, ObservableCollection<IExplorable> loverInstitutions)
-        {
-            Superior = superior;
-            FullName = name;
-            Children = loverInstitutions;
-        }
 
         /// <summary>
         /// Начальник ведомства
@@ -41,7 +37,8 @@ namespace InformationSystem
 
         public string Present()
         {
-            return $"Название: {FullName}\n"; //TUT
+            return $"Institution Name: {FullName}\n\n" +
+                $"Superior: {Superior.Present()}"; 
         }
     }
 }

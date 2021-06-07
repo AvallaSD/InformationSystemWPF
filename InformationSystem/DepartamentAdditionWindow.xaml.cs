@@ -14,16 +14,14 @@ using System.Windows.Shapes;
 namespace InformationSystem
 {
     /// <summary>
-    /// Логика взаимодействия для InstitutionAdditionWindow.xaml
+    /// Логика взаимодействия для DepartamentAdditionWindow.xaml
     /// </summary>
-    public partial class InstitutionAdditionWindow : Window
+    public partial class DepartamentAdditionWindow : Window
     {
         List<Chief> chiefs;
         object selected;
 
-
-
-        public InstitutionAdditionWindow(Organisation infoSystem, MainWindow main, object selected)
+        public DepartamentAdditionWindow(Organisation infoSystem, MainWindow main, object selected)
         {
             InitializeComponent();
             Org = infoSystem;
@@ -31,7 +29,7 @@ namespace InformationSystem
             chiefs = infoSystem.ChiefsList.ToList();
             chiefComboBox.ItemsSource = chiefs.Where(x => x.WorkPlace == null).Select(x => $"{x.Surname} {x.FirstName}");
             this.selected = selected;
-            
+
         }
 
         public MainWindow Main { get; set; }
@@ -39,18 +37,19 @@ namespace InformationSystem
 
         private void submitBtn_Click(object sender, RoutedEventArgs e)
         {
-            var newInstitution = new Institution(chiefs.ElementAt(chiefComboBox.SelectedIndex), name.Text);
-            if (!(selected is Institution))
+            var newDepartament = new Departament(chiefs.ElementAt(chiefComboBox.SelectedIndex), name.Text);
+            if ((selected is Institution))
             {
-                Org.AddInstitution(newInstitution);
+                ((Institution)selected).Children.Add(newDepartament);
+                Org.ChiefsList.Remove(chiefs.ElementAt(chiefComboBox.SelectedIndex));
             }
             else
             {
-                ((Institution)selected).Children.Add(newInstitution);
+                MessageBox.Show("Департамент можно добавить только в ведомство");
             }
 
-            Org.ChiefsList.Remove(chiefs.ElementAt(chiefComboBox.SelectedIndex));
             
+
             Close();
             Main.Activate();
         }

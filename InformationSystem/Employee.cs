@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -14,11 +15,12 @@ namespace InformationSystem
         {
             return new Random().Next(min, max);
         }
+
         public Employee(string firstName, string surname, string lastName, DateTime birthDate)
             : this(firstName, surname, lastName, birthDate, GenerateSalary(100, 200))
         {
         }
-
+        [JsonConstructor]
         public Employee(string firstName, string surname, string lastName, DateTime birthDate, int salary)
         {
             FirstName = firstName;
@@ -27,7 +29,7 @@ namespace InformationSystem
             BirthDate = birthDate;
             AccessionDate = DateTime.Now;
             Salary = salary;
-            FullName = LastName + " " + FirstName;
+            FullName = Surname + " " + FirstName;         
         }
 
         /// <summary>
@@ -63,11 +65,23 @@ namespace InformationSystem
         /// <summary>
         /// Место, где работает сотрудник
         /// </summary>
+        
         public IExplorable WorkPlace { get; set; }
 
         /// <summary>
         /// Имя для показа в иерархии
         /// </summary>
         public string FullName { get; set; }
+
+        public string Present()
+        {
+            return $"First Name: {FirstName}\n" +
+                $"Surname: {Surname}\n" +
+                $"Last Name: {LastName}\n" +
+                $"Birth Date: {BirthDate}\n" +
+                $"Accession Date: {AccessionDate}\n" +
+                $"Salary: {Salary}\n"+
+                $"Work Place: {WorkPlace}";
+        }
     }
 }
