@@ -97,5 +97,10 @@ namespace InformationSystem
             treeView.ItemsSource = Org.Children;
             Org.RecalculateSalaryes();
         }
+
+        private void recalculateSalaries_Click(object sender, RoutedEventArgs e)
+        {
+            Org.RecalculateSalaryes();
+        }
     }
 }

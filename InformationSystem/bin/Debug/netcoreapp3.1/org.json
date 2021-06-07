@@ -1,1 +1,265 @@
-{"$id":"1","Children":{"$id":"2","$values":[{"$id":"3","$type":"InformationSystem.Institution, InformationSystem","Superior":{"$id":"4","FirstName":"Главнфй шеф","Surname":"","LastName":"","BirthDate":"2001-01-01T00:00:00","AccessionDate":"2021-06-07T10:27:48.5700648+03:00","Salary":5200,"WorkPlace":{"$ref":"3"},"FullName":" Главнфй шеф","WorkHours":0},"Children":{"$id":"5","$values":[{"$id":"6","$type":"InformationSystem.Institution, InformationSystem","Superior":{"$id":"7","FirstName":"Шеф1","Surname":"","LastName":"","BirthDate":"2001-01-01T00:00:00","AccessionDate":"2021-06-07T10:27:06.589122+03:00","Salary":1300,"WorkPlace":{"$ref":"6"},"FullName":" Шеф1","WorkHours":0},"Children":{"$id":"8","$values":[{"$id":"9","$type":"InformationSystem.Departament, InformationSystem","Children":{"$id":"10","$values":[{"$id":"11","$type":"InformationSystem.Employee, InformationSystem","FirstName":"Сотрудник111","Surname":"","LastName":"","BirthDate":"2011-11-11T00:00:00","AccessionDate":"2021-06-07T10:30:12.3350528+03:00","Salary":196,"WorkPlace":null,"FullName":" Сотрудник111","WorkHours":0},{"$id":"12","$type":"InformationSystem.Employee, InformationSystem","FirstName":"Сотрудник112","Surname":"","LastName":"","BirthDate":"2012-12-12T00:00:00","AccessionDate":"2021-06-07T10:30:48.0364497+03:00","Salary":125,"WorkPlace":null,"FullName":" Сотрудник112","WorkHours":0},{"$id":"13","$type":"InformationSystem.Intern, InformationSystem","FirstName":"Интерн113","Surname":"","LastName":"","BirthDate":"2013-10-13T00:00:00","AccessionDate":"2021-06-07T10:31:10.8582655+03:00","Salary":17,"WorkPlace":null,"FullName":" Интерн113","WorkHours":0}]},"FullName":"Департамент 11","Superior":{"$id":"14","FirstName":"Шеф11","Surname":"","LastName":"","BirthDate":"2011-11-11T00:00:00","AccessionDate":"2021-06-07T10:29:35.9660378+03:00","Salary":1300,"WorkPlace":{"$ref":"9"},"FullName":" Шеф11","WorkHours":0},"Parent":null}]},"Parent":null,"FullName":"Ведомство1"},{"$id":"15","$type":"InformationSystem.Institution, InformationSystem","Superior":{"$id":"16","FirstName":"Шеф2","Surname":"","LastName":"","BirthDate":"2002-02-02T00:00:00","AccessionDate":"2021-06-07T10:28:35.157755+03:00","Salary":2600,"WorkPlace":{"$ref":"15"},"FullName":" Шеф2","WorkHours":0},"Children":{"$id":"17","$values":[{"$id":"18","$type":"InformationSystem.Institution, InformationSystem","Superior":{"$id":"19","FirstName":"Шеф21","Surname":"","LastName":"","BirthDate":"2021-12-21T00:00:00","AccessionDate":"2021-06-07T10:31:50.3106868+03:00","Salary":1300,"WorkPlace":{"$ref":"18"},"FullName":" Шеф21","WorkHours":0},"Children":{"$id":"20","$values":[{"$id":"21","$type":"InformationSystem.Departament, InformationSystem","Children":{"$id":"22","$values":[{"$id":"23","$type":"InformationSystem.Employee, InformationSystem","FirstName":"Сотрудник2111","Surname":"","LastName":"","BirthDate":"2111-12-21T00:00:00","AccessionDate":"2021-06-07T10:35:26.2261212+03:00","Salary":199,"WorkPlace":null,"FullName":" Сотрудник2111","WorkHours":0}]},"FullName":"Департамент211","Superior":{"$id":"24","FirstName":"Шеф211","Surname":"","LastName":"","BirthDate":"0211-12-21T00:00:00","AccessionDate":"2021-06-07T10:32:54.3507388+03:00","Salary":1300,"WorkPlace":{"$ref":"21"},"FullName":" Шеф211","WorkHours":0},"Parent":null}]},"Parent":null,"FullName":"Ведомство21"},{"$id":"25","$type":"InformationSystem.Departament, InformationSystem","Children":{"$id":"26","$values":[]},"FullName":"Департамент22","Superior":{"$id":"27","FirstName":"Шеф22","Surname":"","LastName":"","BirthDate":"2022-12-22T00:00:00","AccessionDate":"2021-06-07T11:03:45.9482804+03:00","Salary":1300,"WorkPlace":{"$ref":"25"},"FullName":" Шеф22","WorkHours":0},"Parent":null}]},"Parent":null,"FullName":"Ведомство2"},{"$id":"28","$type":"InformationSystem.Institution, InformationSystem","Superior":{"$id":"29","FirstName":"Шеф3","Surname":"","LastName":"","BirthDate":"2003-03-03T00:00:00","AccessionDate":"2021-06-07T10:28:59.7588883+03:00","Salary":1300,"WorkPlace":{"$ref":"28"},"FullName":" Шеф3","WorkHours":0},"Children":{"$id":"30","$values":[]},"Parent":null,"FullName":"Ведомство3"}]},"Parent":null,"FullName":"Главное ведомство"}]},"ChiefsList":{"$id":"31","$values":[]}}
+{
+  "$id": "1",
+  "Children": {
+    "$id": "2",
+    "$values": [
+      {
+        "$id": "3",
+        "$type": "InformationSystem.Institution, InformationSystem",
+        "Superior": {
+          "$id": "4",
+          "FirstName": "Главнфй шеф",
+          "Surname": "",
+          "LastName": "",
+          "BirthDate": "2001-01-01T00:00:00",
+          "AccessionDate": "2021-06-07T10:27:48.5700648+03:00",
+          "Salary": 5200,
+          "WorkPlace": {
+            "$ref": "3"
+          },
+          "FullName": " Главнфй шеф",
+          "WorkHours": 0
+        },
+        "Children": {
+          "$id": "5",
+          "$values": [
+            {
+              "$id": "6",
+              "$type": "InformationSystem.Institution, InformationSystem",
+              "Superior": {
+                "$id": "7",
+                "FirstName": "Шеф1",
+                "Surname": "",
+                "LastName": "",
+                "BirthDate": "2001-01-01T00:00:00",
+                "AccessionDate": "2021-06-07T10:27:06.589122+03:00",
+                "Salary": 1300,
+                "WorkPlace": {
+                  "$ref": "6"
+                },
+                "FullName": " Шеф1",
+                "WorkHours": 0
+              },
+              "Children": {
+                "$id": "8",
+                "$values": [
+                  {
+                    "$id": "9",
+                    "$type": "InformationSystem.Departament, InformationSystem",
+                    "Children": {
+                      "$id": "10",
+                      "$values": [
+                        {
+                          "$id": "11",
+                          "$type": "InformationSystem.Employee, InformationSystem",
+                          "FirstName": "Сотрудник111",
+                          "Surname": "",
+                          "LastName": "",
+                          "BirthDate": "2011-11-11T00:00:00",
+                          "AccessionDate": "2021-06-07T10:30:12.3350528+03:00",
+                          "Salary": 2789,
+                          "WorkPlace": null,
+                          "FullName": " Сотрудник111",
+                          "WorkHours": 0
+                        },
+                        {
+                          "$id": "12",
+                          "$type": "InformationSystem.Employee, InformationSystem",
+                          "FirstName": "Сотрудник112",
+                          "Surname": "",
+                          "LastName": "",
+                          "BirthDate": "2012-12-12T00:00:00",
+                          "AccessionDate": "2021-06-07T10:30:48.0364497+03:00",
+                          "Salary": 1684,
+                          "WorkPlace": null,
+                          "FullName": " Сотрудник112",
+                          "WorkHours": 0
+                        },
+                        {
+                          "$id": "13",
+                          "$type": "InformationSystem.Intern, InformationSystem",
+                          "FirstName": "Интерн113",
+                          "Surname": "",
+                          "LastName": "",
+                          "BirthDate": "2013-10-13T00:00:00",
+                          "AccessionDate": "2021-06-07T10:31:10.8582655+03:00",
+                          "Salary": 327,
+                          "WorkPlace": null,
+                          "FullName": " Интерн113",
+                          "WorkHours": 0
+                        }
+                      ]
+                    },
+                    "FullName": "Департамент 11",
+                    "Superior": {
+                      "$id": "14",
+                      "FirstName": "Шеф11",
+                      "Surname": "",
+                      "LastName": "",
+                      "BirthDate": "2011-11-11T00:00:00",
+                      "AccessionDate": "2021-06-07T10:29:35.9660378+03:00",
+                      "Salary": 1300,
+                      "WorkPlace": {
+                        "$ref": "9"
+                      },
+                      "FullName": " Шеф11",
+                      "WorkHours": 0
+                    },
+                    "Parent": null
+                  }
+                ]
+              },
+              "Parent": null,
+              "FullName": "Ведомство1"
+            },
+            {
+              "$id": "15",
+              "$type": "InformationSystem.Institution, InformationSystem",
+              "Superior": {
+                "$id": "16",
+                "FirstName": "Шеф2",
+                "Surname": "",
+                "LastName": "",
+                "BirthDate": "2002-02-02T00:00:00",
+                "AccessionDate": "2021-06-07T10:28:35.157755+03:00",
+                "Salary": 2600,
+                "WorkPlace": {
+                  "$ref": "15"
+                },
+                "FullName": " Шеф2",
+                "WorkHours": 0
+              },
+              "Children": {
+                "$id": "17",
+                "$values": [
+                  {
+                    "$id": "18",
+                    "$type": "InformationSystem.Institution, InformationSystem",
+                    "Superior": {
+                      "$id": "19",
+                      "FirstName": "Шеф21",
+                      "Surname": "",
+                      "LastName": "",
+                      "BirthDate": "2021-12-21T00:00:00",
+                      "AccessionDate": "2021-06-07T10:31:50.3106868+03:00",
+                      "Salary": 1300,
+                      "WorkPlace": {
+                        "$ref": "18"
+                      },
+                      "FullName": " Шеф21",
+                      "WorkHours": 0
+                    },
+                    "Children": {
+                      "$id": "20",
+                      "$values": [
+                        {
+                          "$id": "21",
+                          "$type": "InformationSystem.Departament, InformationSystem",
+                          "Children": {
+                            "$id": "22",
+                            "$values": [
+                              {
+                                "$id": "23",
+                                "$type": "InformationSystem.Employee, InformationSystem",
+                                "FirstName": "Сотрудник2111",
+                                "Surname": "",
+                                "LastName": "",
+                                "BirthDate": "2111-12-21T00:00:00",
+                                "AccessionDate": "2021-06-07T10:35:26.2261212+03:00",
+                                "Salary": 1567,
+                                "WorkPlace": null,
+                                "FullName": " Сотрудник2111",
+                                "WorkHours": 0
+                              }
+                            ]
+                          },
+                          "FullName": "Департамент211",
+                          "Superior": {
+                            "$id": "24",
+                            "FirstName": "Шеф211",
+                            "Surname": "",
+                            "LastName": "",
+                            "BirthDate": "0211-12-21T00:00:00",
+                            "AccessionDate": "2021-06-07T10:32:54.3507388+03:00",
+                            "Salary": 1300,
+                            "WorkPlace": {
+                              "$ref": "21"
+                            },
+                            "FullName": " Шеф211",
+                            "WorkHours": 0
+                          },
+                          "Parent": null
+                        }
+                      ]
+                    },
+                    "Parent": null,
+                    "FullName": "Ведомство21"
+                  },
+                  {
+                    "$id": "25",
+                    "$type": "InformationSystem.Departament, InformationSystem",
+                    "Children": {
+                      "$id": "26",
+                      "$values": [
+                      ]
+                    },
+                    "FullName": "Департамент22",
+                    "Superior": {
+                      "$id": "27",
+                      "FirstName": "Шеф22",
+                      "Surname": "",
+                      "LastName": "",
+                      "BirthDate": "2022-12-22T00:00:00",
+                      "AccessionDate": "2021-06-07T11:03:45.9482804+03:00",
+                      "Salary": 1300,
+                      "WorkPlace": {
+                        "$ref": "25"
+                      },
+                      "FullName": " Шеф22",
+                      "WorkHours": 0
+                    },
+                    "Parent": null
+                  }
+                ]
+              },
+              "Parent": null,
+              "FullName": "Ведомство2"
+            },
+            {
+              "$id": "28",
+              "$type": "InformationSystem.Institution, InformationSystem",
+              "Superior": {
+                "$id": "29",
+                "FirstName": "Шеф3",
+                "Surname": "",
+                "LastName": "",
+                "BirthDate": "2003-03-03T00:00:00",
+                "AccessionDate": "2021-06-07T10:28:59.7588883+03:00",
+                "Salary": 1300,
+                "WorkPlace": {
+                  "$ref": "28"
+                },
+                "FullName": " Шеф3",
+                "WorkHours": 0
+              },
+              "Children": {
+                "$id": "30",
+                "$values": [
+                ]
+              },
+              "Parent": null,
+              "FullName": "Ведомство3"
+            }
+          ]
+        },
+        "Parent": null,
+        "FullName": "Главное ведомство"
+      }
+    ]
+  },
+  "ChiefsList": {
+    "$id": "31",
+    "$values": [
+    ]
+  }
+}

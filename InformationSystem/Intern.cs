@@ -8,7 +8,7 @@ namespace InformationSystem
     public class Intern : Employee, IExplorable
     {
         public Intern(string firstName, string surname, string lastName, DateTime birthDate )
-            : this(firstName, surname, lastName, birthDate, GenerateSalary(10, 20))
+            : this(firstName, surname, lastName, birthDate, GenerateSalary(100, 500))
         {
         }
 

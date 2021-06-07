@@ -84,6 +84,13 @@
 				VerticalAlignment="Top"
 				Margin="20,140,20,0" 
 				Click="loadJson_Click" />
+		<Button x:Name="recalculateSalaries" 
+				Content="Пересчитать зарплаты" 
+				Grid.Column="1"
+				Height="20" 
+				VerticalAlignment="Top"
+				Margin="20,140,20,0" 
+				Click="recalculateSalaries_Click" />
 
 
 	</Grid>

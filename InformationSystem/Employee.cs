@@ -17,7 +17,7 @@ namespace InformationSystem
         }
 
         public Employee(string firstName, string surname, string lastName, DateTime birthDate)
-            : this(firstName, surname, lastName, birthDate, GenerateSalary(100, 200))
+            : this(firstName, surname, lastName, birthDate, GenerateSalary(5, 20)*160)
         {
         }
         [JsonConstructor]
@@ -73,7 +73,6 @@ namespace InformationSystem
         /// </summary>
         public string FullName { get; set; }
 
-        public int WorkHours { get; set; }
 
         public string Present()
         {
