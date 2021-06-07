@@ -23,31 +23,31 @@ namespace InformationSystem
     /// </summary>
     public partial class MainWindow : Window
     {
-        Organisation Organisation { get; set; }
+        Organisation Org { get; set; }
 
         public MainWindow()
         {
             InitializeComponent();
-            Organisation = new Organisation();
-            treeView.ItemsSource = Organisation.Children;
+            Org = new Organisation();
+            treeView.ItemsSource = Org.Children;
         }
 
         private void addEmployee_Click(object sender, RoutedEventArgs e)
         {
-            EmployeeAdditionWindow eaw = new EmployeeAdditionWindow(Organisation, this, (IExplorable)treeView.SelectedItem);
+            EmployeeAdditionWindow eaw = new EmployeeAdditionWindow(Org, this, (IExplorable)treeView.SelectedItem);
             eaw.Show();
 
         }
 
         private void addInstitution_Click(object sender, RoutedEventArgs e)
         {
-            InstitutionAdditionWindow iaw = new InstitutionAdditionWindow(Organisation, this, treeView.SelectedItem);
+            InstitutionAdditionWindow iaw = new InstitutionAdditionWindow(Org, this, treeView.SelectedItem);
             iaw.Show();
         }
 
         private void addDepartament_Click(object sender, RoutedEventArgs e)
         {
-            DepartamentAdditionWindow iaw = new DepartamentAdditionWindow(Organisation, this, treeView.SelectedItem);
+            DepartamentAdditionWindow iaw = new DepartamentAdditionWindow(Org, this, treeView.SelectedItem);
             iaw.Show();
         }
 
@@ -63,7 +63,7 @@ namespace InformationSystem
         {
             using (TextWriter stream = new StreamWriter("org.json"))
             {
-                stream.Write(JsonConvert.SerializeObject(Organisation, new JsonSerializerSettings()
+                stream.Write(JsonConvert.SerializeObject(Org, new JsonSerializerSettings()
                 {
                     PreserveReferencesHandling = PreserveReferencesHandling.All,
                     ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
@@ -79,7 +79,7 @@ namespace InformationSystem
                 using (TextReader stream = new StreamReader("org.json"))
                 {
                     var stringOrg = stream.ReadToEnd().Trim();
-                    Organisation = JsonConvert.DeserializeObject<Organisation>(stringOrg, new JsonSerializerSettings()
+                    Org = JsonConvert.DeserializeObject<Organisation>(stringOrg, new JsonSerializerSettings()
                     {
                         PreserveReferencesHandling = PreserveReferencesHandling.All,
                         TypeNameHandling = TypeNameHandling.Auto,
@@ -94,7 +94,8 @@ namespace InformationSystem
                 MessageBox.Show(ex.Message, "Exception!");
                 throw ex;
             }
-            treeView.ItemsSource = Organisation.Children;
+            treeView.ItemsSource = Org.Children;
+            Org.RecalculateSalaryes();
         }
     }
 }

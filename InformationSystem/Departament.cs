@@ -5,7 +5,7 @@ using System.Text;
 
 namespace InformationSystem
 {
-    public class Departament : IExplorable
+    public class Departament : IExplorable, IWorkPlace
     {
         public Departament( Chief superior,string fullName)
         {

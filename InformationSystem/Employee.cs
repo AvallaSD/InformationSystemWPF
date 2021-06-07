@@ -73,6 +73,8 @@ namespace InformationSystem
         /// </summary>
         public string FullName { get; set; }
 
+        public int WorkHours { get; set; }
+
         public string Present()
         {
             return $"First Name: {FirstName}\n" +

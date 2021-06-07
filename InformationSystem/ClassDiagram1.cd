@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
   <Class Name="InformationSystem.Employee">
-    <Position X="2.75" Y="1.75" Width="2.25" />
+    <Position X="4.75" Y="1.25" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAGAAAAAAAJAAAAAAAAQABAAACAAAAABBAAAAAAg=</HashCode>
+      <HashCode>AAAAAGAAAAAAAJAAAAAAAAQABAAACAAQAABBAAAAAAg=</HashCode>
       <FileName>Employee.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="1.731" />
   </Class>
   <Class Name="InformationSystem.Intern">
-    <Position X="1.5" Y="5.75" Width="2" />
+    <Position X="3.5" Y="5.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Intern.cs</FileName>
@@ -17,15 +17,15 @@
     <Lollipop Orientation="Right" Position="0.258" />
   </Class>
   <Class Name="InformationSystem.Chief">
-    <Position X="4.25" Y="5.75" Width="2" />
+    <Position X="6.25" Y="5.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Chief.cs</FileName>
     </TypeIdentifier>
     <Lollipop Orientation="Right" Position="0.789" />
   </Class>
   <Class Name="InformationSystem.Departament">
-    <Position X="3.75" Y="8.5" Width="3.25" />
+    <Position X="1.5" Y="7.75" Width="3.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAJAAAAAEQAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
       <FileName>Departament.cs</FileName>
@@ -37,7 +37,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="InformationSystem.Institution">
-    <Position X="7.75" Y="7" Width="3.25" />
+    <Position X="5.5" Y="8.25" Width="3.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAJAAAAAEQAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
       <FileName>Institution.cs</FileName>
@@ -49,29 +49,25 @@
     <Lollipop Position="0.992" />
   </Class>
   <Class Name="InformationSystem.Organisation">
-    <Position X="7.5" Y="4.75" Width="1.75" />
+    <Position X="9.25" Y="5.25" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAIAAAAAACAg=</HashCode>
+      <HashCode>AAAAAAAAAACAAAAAAAAEAACAAAAAAAAAAIAAAAAACAg=</HashCode>
       <FileName>Organisation.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
-      <Property Name="Children" />
       <Property Name="ChiefsList" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="InformationSystem.MainWindow">
-    <Position X="11" Y="1.25" Width="2.75" />
+    <Position X="11.75" Y="5" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAgAAAAAAAAAIAAAAABAAAAAAAAAAAAAAAQCEAIAAAA=</HashCode>
+      <HashCode>AAgAAAAAAAAAIAAAAABAAAAAAAAAAAAgAAQCAAIAAAA=</HashCode>
       <FileName>MainWindow.xaml.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Organisation" />
-    </ShowAsAssociation>
     <Lollipop Position="1.3" />
   </Class>
   <Class Name="InformationSystem.InstitutionAdditionWindow">
-    <Position X="7.25" Y="1.5" Width="2.25" />
+    <Position X="10.75" Y="2" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAgQAAABgAAAAA=</HashCode>
       <FileName>InstitutionAdditionWindow.xaml.cs</FileName>
@@ -83,7 +79,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="InformationSystem.EmployeeAdditionWindow">
-    <Position X="10.25" Y="4.5" Width="2.25" />
+    <Position X="10.75" Y="8.25" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAFgAAAAA=</HashCode>
       <FileName>EmployeeAdditionWindow.xaml.cs</FileName>
@@ -95,10 +91,17 @@
     <Lollipop Position="0.2" />
   </Class>
   <Interface Name="InformationSystem.IExplorable">
-    <Position X="12.5" Y="7.75" Width="1.5" />
+    <Position X="8.5" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IExplorable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="InformationSystem.IWorkPlace">
+    <Position X="14" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>IWorkPlace.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />

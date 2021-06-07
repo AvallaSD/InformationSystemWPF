@@ -6,7 +6,7 @@ using System.Text;
 
 namespace InformationSystem
 {
-    public class Institution : IExplorable
+    public class Institution : IExplorable, IWorkPlace
     {
         [JsonConstructor]
         public Institution(Chief superior, string name)
@@ -38,7 +38,7 @@ namespace InformationSystem
         public string Present()
         {
             return $"Institution Name: {FullName}\n\n" +
-                $"Superior: {Superior.Present()}"; 
+                $"Superior: {Superior.Present()}";
         }
     }
 }

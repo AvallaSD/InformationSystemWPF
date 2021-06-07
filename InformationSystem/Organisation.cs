@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
+using System.Linq;
 using System.Text;
-
+using System.Windows;
 
 namespace InformationSystem
 {
@@ -31,7 +32,40 @@ namespace InformationSystem
             Children.Add(institution);
         }
 
-        
+        public void RecalculateSalaryes()
+        {
+            Children.ToList().ForEach(x => RecurseRecalculation(x as IWorkPlace));
+        }
+
+        private void RecurseRecalculation(IWorkPlace place)
+        {
+            var children = place.Children;
+            var superior = place.Superior;
+
+            if (place.Children.Any())
+            {
+                foreach (var child in children)
+                {
+                    if (child as IWorkPlace != null)
+                    {
+                        RecurseRecalculation(child as IWorkPlace);
+                    }                   
+                }
+            }
+
+            int superiorSalary = 0;
+
+            if (place is Departament)
+            {
+                superiorSalary = (int)(children.Aggregate(0, (salarySum, x) => salarySum + (x as Employee).Salary) * 0.15);
+            }
+
+            if (place is Institution)
+            {
+                superiorSalary = children.Aggregate(0, (salarySum, x) => salarySum + (x as IWorkPlace).Superior.Salary);
+            }
+            superior.Salary = superiorSalary > 1300 ? superiorSalary : 1300;
+        }
 
     }
 }
