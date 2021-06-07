@@ -1,0 +1,121 @@
+{
+  "$id": "1",
+  "Children": {
+    "$id": "2",
+    "$values": [
+      {
+        "$id": "3",
+        "$type": "InformationSystem.Institution, InformationSystem",
+        "Superior": {
+          "$id": "4",
+          "FirstName": "1",
+          "Surname": "",
+          "LastName": "",
+          "BirthDate": "2001-01-01T00:00:00",
+          "AccessionDate": "2021-06-06T15:46:22.2599731+03:00",
+          "Salary": 12,
+          "WorkPlace": {
+            "$ref": "3"
+          },
+          "FullName": " 1"
+        },
+        "Children": {
+          "$id": "5",
+          "$values": [
+            {
+              "$id": "6",
+              "$type": "InformationSystem.Departament, InformationSystem",
+              "Children": {
+                "$id": "7",
+                "$values": [
+                  {
+                    "$id": "8",
+                    "$type": "InformationSystem.Employee, InformationSystem",
+                    "FirstName": "3",
+                    "Surname": "",
+                    "LastName": "",
+                    "BirthDate": "2003-03-03T00:00:00",
+                    "AccessionDate": "2021-06-06T15:46:59.4074919+03:00",
+                    "Salary": 105,
+                    "WorkPlace": null,
+                    "FullName": " 3"
+                  },
+                  {
+                    "$id": "9",
+                    "$type": "InformationSystem.Intern, InformationSystem",
+                    "FirstName": "4",
+                    "Surname": "",
+                    "LastName": "",
+                    "BirthDate": "2004-04-04T00:00:00",
+                    "AccessionDate": "2021-06-06T16:41:52.7714237+03:00",
+                    "Salary": 10,
+                    "WorkPlace": null,
+                    "FullName": " 4"
+                  },
+                  {
+                    "$id": "10",
+                    "$type": "InformationSystem.Intern, InformationSystem",
+                    "FirstName": "5",
+                    "Surname": "",
+                    "LastName": "",
+                    "BirthDate": "2005-05-05T00:00:00",
+                    "AccessionDate": "2021-06-06T16:47:20.6392693+03:00",
+                    "Salary": 10,
+                    "WorkPlace": null,
+                    "FullName": " 5"
+                  }
+                ]
+              },
+              "FullName": "11",
+              "Superior": {
+                "$id": "11",
+                "FirstName": "2",
+                "Surname": "",
+                "LastName": "",
+                "BirthDate": "2002-02-02T00:00:00",
+                "AccessionDate": "2021-06-06T15:46:39.3283742+03:00",
+                "Salary": 12,
+                "WorkPlace": {
+                  "$ref": "6"
+                },
+                "FullName": " 2"
+              },
+              "Parent": null
+            }
+          ]
+        },
+        "Parent": null,
+        "FullName": "1"
+      },
+      {
+        "$id": "12",
+        "$type": "InformationSystem.Institution, InformationSystem",
+        "Superior": {
+          "$id": "13",
+          "FirstName": "sheff",
+          "Surname": "",
+          "LastName": "",
+          "BirthDate": "2006-06-06T00:00:00",
+          "AccessionDate": "2021-06-06T16:49:03.6594388+03:00",
+          "Salary": 16,
+          "WorkPlace": {
+            "$ref": "12"
+          },
+          "FullName": " sheff"
+        },
+        "Children": {
+          "$id": "14",
+          "$values": [
+          ]
+        },
+        "Parent": null,
+        "FullName": "6"
+      }
+    ]
+  },
+  "ChiefsList": {
+    "$id": "15",
+    "$values": [
+    ]
+  }
+}
